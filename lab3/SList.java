@@ -124,6 +124,15 @@ public class SList {
 
   public static void main (String[] args) {
     // Fill in your solution for Part I here.
+    SList x = new SList();
+    x.insertFront(12);
+    x.insertFront(9);
+    x.insertFront(6);
+    System.out.println(x);
+
+    x.insertFront(3);
+    x.insertEnd(15);
+    System.out.println(x);
 
     testEmpty();
     testAfterInsertFront();
