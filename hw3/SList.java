@@ -112,7 +112,7 @@ public class SList {
 
   public void squish() {
     if (size==0){
-      break;
+      return;
     }
     SListNode node = head;
     SListNode temp = head;
@@ -142,6 +142,13 @@ public class SList {
    **/
 
   public void twin() {
+    SListNode node = head;
+    for (int i=0;i<size;i++) {
+      SListNode copy = new SListNode(node.item, node.next);
+      node.next = copy;
+      node = copy.next;
+      size++;
+    }
     // Fill in your solution here.  (Ours is seven lines long.)
   }
 
