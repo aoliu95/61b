@@ -111,8 +111,24 @@ public class SList {
    **/
 
   public void squish() {
+    if (size==0){
+      break;
+    }
+    SListNode node = head;
+    SListNode temp = head;
+    int loop = size-1;
+    for (int i=0;i<loop;i++) {
+      node = node.next;
+      if (node.item.equals(temp.item)){
+        temp.next=node.next;
+        size--;
+        }
+      else{
+        temp = node;
+      }
+      }
+    }
     // Fill in your solution here.  (Ours is eleven lines long.)
-  }
 
   /**
    *  twin() takes this list and doubles its length by replacing each node
