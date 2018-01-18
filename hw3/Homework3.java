@@ -27,7 +27,7 @@ public class Homework3 {
     int index_o = 0;
     for (int index = 1;index<size;index++){      
       if (result[index_o] == ints[index]) {
-        break;
+        continue;
         }
       else {
         index_o++;
