@@ -21,7 +21,29 @@ public class Homework3 {
   public static void smoosh(int[] ints) {
     // Fill in your solution here.  (Ours is twelve lines long, not counting
     // blank lines or lines already present in this file.)
-  }
+    int size = ints.length;
+    int[] result = new int[size];
+    result[0] = ints[0];
+    int index_o = 0;
+    for (int index = 1;index<size;index++){      
+      if (result[index_o] == ints[index]) {
+        break;
+        }
+      else {
+        index_o++;
+        result[index_o] = ints[index];
+      }
+      }
+    
+    while(index_o < (size-1)) {
+      index_o++;
+      result[index_o] = -1;
+    }
+    for (int index = 0;index<size;index++){
+        ints[index] = result[index];
+    }
+    }      
+
 
   /**
    *  stringInts() converts an array of ints to a String.
